@@ -145,14 +145,6 @@ SetHDR: setting connector colorspace to BT2020_YCC
 
 The Samsung TV should show "HDR" in its info panel, and the picture should look correct.
 
-### Bonus — unrelated log noise on RPi5
-
-The RPi5 has no V4L2 m2m deinterlacer device, but Kodi defaults to trying it, which logs `avfilter_graph_config: Invalid argument (-22)` on every playback. Not related to HDR, but to silence it, set this in Kodi:
-
-```
-videoplayer.primeallowhwdeinterlace = false
-```
-
 ## Technical Details (for the curious)
 
 ### EDID structure on Samsung S92C
