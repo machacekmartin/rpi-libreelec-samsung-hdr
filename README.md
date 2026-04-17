@@ -2,6 +2,8 @@
 
 If you're running **LibreELEC on a Raspberry Pi 5** connected to a **Samsung TV** (S90C, S92C, S95C, QN90C, QN95C, or similar recent 4K/8K models), and HDR content plays back looking **washed out with a greenish tint**, this repo explains why and how to fix it.
 
+> **Note:** This investigation and writeup were done with the help of AI (Claude). The diagnosis, code paths, and fix were verified on real hardware, but the tracing through Kodi/`libdisplay-info` internals leaned heavily on AI-assisted reading.
+
 **TL;DR:** Samsung TVs use a quirk in their EDID (HDMI Forum Extension Override) that the version of `libdisplay-info` shipped with LibreELEC 12.2.1 doesn't understand. Kodi ends up thinking your TV doesn't support HDR, so it sends HDR pixels without the HDR flag. The TV treats them as SDR → washed out picture. The fix is to patch the EDID at boot.
 
 ## Symptoms
