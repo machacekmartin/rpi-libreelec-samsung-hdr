@@ -1,4 +1,4 @@
-# Fix: HDR washed out / greenish on Raspberry Pi 5 + LibreELEC + Samsung TV
+# Washed out / greenish HDR on Raspberry Pi 5 + LibreELEC + Samsung TV
 
 If you're running **LibreELEC on a Raspberry Pi 5** connected to a **Samsung TV** (S90C, S92C, S95C, QN90C, QN95C, or similar recent 4K/8K models), and HDR content plays back looking **washed out with a greenish tint**, this repo explains why and how to fix it.
 
